@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Movies';
+  scrolling:boolean=false;
+  prev:any= window.pageYOffset;
+  
+  scroll(){
+
+  }
 }
