@@ -13,11 +13,11 @@ import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
-  {path:"home",component:HomeComponent},
-  {path:"tv", component:TvShowsComponent},
-  {path:"people", component:PeopleComponent},
-  {path:"movies", component:MoviesComponent},
-  {path:"moviedetails/:id/:alt", component:MoviedetailsComponent},
+  {path:"home",canActivate:[AuthGuard],component:HomeComponent},
+  {path:"tv",canActivate:[AuthGuard], component:TvShowsComponent},
+  {path:"people", canActivate:[AuthGuard],component:PeopleComponent},
+  {path:"movies",canActivate:[AuthGuard], component:MoviesComponent},
+  {path:"moviedetails/:id/:alt",canActivate:[AuthGuard], component:MoviedetailsComponent},
   {path:"login", component:LoginComponent},
   {path:"register", component:RegisterComponent},
   {path:"**", component:NotfoundComponent},
