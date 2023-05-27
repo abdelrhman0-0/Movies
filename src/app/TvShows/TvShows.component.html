@@ -19,7 +19,7 @@
                 <div class="img-container">
                     <img src= {{imgPre+tv.poster_path}} class="w-100" alt="tv-poster">
                     <h3 class="mt-3">{{tv.name}}</h3>
-                    <div class="rate  "><span>{{tv.vote_average}}</span></div>
+                    <div class="rate  "><span>{{tv.vote_average | number: '1.0-0'}}</span></div>
                 </div>
             </a>
         </div>
